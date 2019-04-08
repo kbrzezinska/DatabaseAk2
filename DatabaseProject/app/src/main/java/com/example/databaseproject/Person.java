@@ -23,4 +23,15 @@ public class Person extends RealmObject {
         this.id=id;
 
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "FirstName='" + FirstName + '\'' +
+                ", LastName='" + LastName + '\'' +
+                ", age=" + age +
+                ", dogs=" + dogs.toString() +
+                ", id=" + id +
+                '}';
+    }
 }

@@ -21,5 +21,12 @@ public class Dog extends RealmObject {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
