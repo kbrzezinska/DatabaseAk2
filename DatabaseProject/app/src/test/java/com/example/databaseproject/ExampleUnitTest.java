@@ -1,4 +1,4 @@
-package com.example.databaseproject2;
+package com.example.databaseproject;
 
 import org.junit.Test;
 
