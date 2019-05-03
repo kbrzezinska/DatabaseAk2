@@ -1,7 +1,5 @@
 package com.example.databaseproject;
 
-import android.R.layout;
-import android.app.Activity;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,17 +8,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
-
-import static android.R.layout.*;
 
 public class DB_Generator extends AppCompatActivity {
 

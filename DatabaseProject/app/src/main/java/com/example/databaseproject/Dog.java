@@ -1,8 +1,6 @@
 package com.example.databaseproject;
 
 import io.realm.RealmObject;
-import io.realm.RealmResults;
-import io.realm.annotations.LinkingObjects;
 
 public class Dog extends RealmObject {
 
