@@ -1,4 +1,4 @@
-package com.example.databasev2;
+package com.example.databaseproject;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;

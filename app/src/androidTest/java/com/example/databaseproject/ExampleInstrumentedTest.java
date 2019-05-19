@@ -1,4 +1,4 @@
-package com.example.databasev2;
+package com.example.databaseproject;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.databasev2", appContext.getPackageName());
+        assertEquals("com.example.databaseproject", appContext.getPackageName());
     }
 }
