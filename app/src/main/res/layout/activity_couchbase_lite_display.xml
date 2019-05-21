@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DBGenerator">
+    tools:context=".CouchbaseLiteDisplay">
 
     <Button
-        android:id="@+id/prevActivityButton"
+        android:id="@+id/prevActivityButton2"
         android:layout_width="165dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -23,7 +23,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/refreshViewButton"
+        android:id="@+id/refreshViewButton2"
         android:layout_width="165dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -35,11 +35,11 @@
         android:text="REFRESH VIEW"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prevActivityButton"
+        app:layout_constraintTop_toBottomOf="@+id/prevActivityButton2"
         tools:ignore="MissingConstraints" />
 
     <ListView
-        android:id="@+id/itemsListView"
+        android:id="@+id/itemsListView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -51,6 +51,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/refreshViewButton" />
+        app:layout_constraintTop_toBottomOf="@+id/refreshViewButton2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

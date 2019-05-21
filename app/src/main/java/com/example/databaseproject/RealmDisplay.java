@@ -4,19 +4,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class DBGenerator extends AppCompatActivity {
+public class RealmDisplay extends AppCompatActivity {
 
     private Button refreshViewButton;
     private Button prevActivityButton;
@@ -28,7 +26,7 @@ public class DBGenerator extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dbgenerator);
+        setContentView(R.layout.realm_display);
 
         id = 0;
         realm = Realm.getDefaultInstance();
@@ -45,7 +43,7 @@ public class DBGenerator extends AppCompatActivity {
                     dataList.add(resultPersons.get(i).toString());
                 }
 
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(DBGenerator.this, android.R.layout.simple_list_item_1, dataList);
+                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(RealmDisplay.this, android.R.layout.simple_list_item_1, dataList);
                 itemsListView.setAdapter(arrayAdapter);
             }
         });

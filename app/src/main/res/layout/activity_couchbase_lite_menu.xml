@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CouchbaseLiteMenu">
 
     <Button
-        android:id="@+id/findButton"
+        android:id="@+id/findButton2"
         android:layout_width="165dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -19,11 +19,11 @@
         android:text="FIND"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editButton"
+        app:layout_constraintTop_toBottomOf="@+id/editButton2"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/nextActivityButton"
+        android:id="@+id/nextActivityButton2"
         android:layout_width="165dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -40,7 +40,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/genButton"
+        android:id="@+id/genButton2"
         android:layout_width="165dp"
         android:layout_height="42dp"
 
@@ -49,11 +49,11 @@
         android:text="generate list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nextActivityButton"
+        app:layout_constraintTop_toBottomOf="@+id/nextActivityButton2"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/editButton"
+        android:id="@+id/editButton2"
         android:layout_width="165dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -65,11 +65,11 @@
         android:text="edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deleteButton"
+        app:layout_constraintTop_toBottomOf="@+id/deleteButton2"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/deleteButton"
+        android:id="@+id/deleteButton2"
         android:layout_width="165dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -81,11 +81,11 @@
         android:text="delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genButton"
+        app:layout_constraintTop_toBottomOf="@+id/genButton2"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/timeTextView"
+        android:id="@+id/timeTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -98,6 +98,6 @@
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findButton" />
+        app:layout_constraintTop_toBottomOf="@+id/findButton2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
