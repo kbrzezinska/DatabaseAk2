@@ -1,6 +1,7 @@
 package com.example.databaseproject;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import com.couchbase.lite.Result;
 import com.couchbase.lite.ResultSet;
 import com.couchbase.lite.SelectResult;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class CouchbaseLiteMenu extends AppCompatActivity {
@@ -33,6 +35,7 @@ public class CouchbaseLiteMenu extends AppCompatActivity {
 
         // Get the database (and create it if it doesn’t exist).
         DatabaseConfiguration config = new DatabaseConfiguration(getApplicationContext());
+        config.setDirectory(String.format("%s/%s", getApplicationContext().getFilesDir(),"BazaCouch"));
         Database database = null;
         try {
             database = new Database("mydb", config);
@@ -41,8 +44,8 @@ public class CouchbaseLiteMenu extends AppCompatActivity {
         }
 
 // Create a new document (i.e. a record) in the database.
-        MutableDocument mutableDoc = new MutableDocument()
-                .setString("forename", "Anna");
+        MutableDocument mutableDoc = new MutableDocument();
+        mutableDoc.setString("forename", "Anna");
 
 // Save it to the database.
         try {
@@ -68,22 +71,24 @@ public class CouchbaseLiteMenu extends AppCompatActivity {
         com.couchbase.lite.internal.support.Log.w(LogDomain.ALL, "Document ID :: " + document.getId());
         com.couchbase.lite.internal.support.Log.w(LogDomain.ALL, "forename " + document.getString("forename"));
 
+        long c = database.getCount();
+        Log.d("Database count=", Long.toString(c));
 // Create a query to fetch documents of type SDK.
         Query query = QueryBuilder.select(SelectResult.all())
                 .from(DataSource.database(database))
                 .where(Expression.property("forename").equalTo(Expression.string("Anna")));
         ResultSet rs = null;
         try {
-            List<Result> resultList = query.execute().allResults();
-            for(int i = 0; i < resultList.size(); ++i) {
-                //Dlaczego null?
-                com.couchbase.lite.internal.support.Log.w(LogDomain.ALL, "Results ::  " + resultList.get(i).getString("forename"));
+            Iterator<Result> resultIterator = query.execute().iterator();
+            while(resultIterator.hasNext()) {
+                //Dlaczego null? NIE UŻYWAĆ allResult()!!!
+                com.couchbase.lite.internal.support.Log.w(LogDomain.ALL, "Results ::  " + resultIterator.next().getDictionary(0).getString("forename"));
             }
 
             rs = query.execute();
             for (Result result : rs) {
                 //Dlaczego null?
-                com.couchbase.lite.internal.support.Log.w(LogDomain.ALL, "Results ::  " + result.getString("forename"));
+                com.couchbase.lite.internal.support.Log.w(LogDomain.ALL, "Results ::  " + result.getDictionary(0).getString("forename"));
             }
 
             com.couchbase.lite.internal.support.Log.w(LogDomain.ALL, "Number of rows ::  " + query.execute().allResults().size());
