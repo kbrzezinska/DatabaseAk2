@@ -1,19 +1,12 @@
 package com.example.databaseproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
-
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
@@ -26,10 +19,6 @@ public class RealmMenu extends AppCompatActivity {
     private Button editButton;
     private Button findButton;
     private TextView timeTextView;
-    private ListView itemsListView;
-    private List<String> dataList;
-    private ArrayAdapter<String> adapter;
-    private EditText txtInput;
     private Realm realm;
     private long start;
     private long time;
@@ -135,15 +124,5 @@ public class RealmMenu extends AppCompatActivity {
             }
 
         });
-
-                  /*  Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                writeToDB(FirstName.getText().toString(), SurName.getText().toString(), age.getText().toString(), dogName.getText().toString(), dogAge.getText().toString(), color.getText().toString());
-                ShowDate();
-            }
-        });
-*/
     }
 }

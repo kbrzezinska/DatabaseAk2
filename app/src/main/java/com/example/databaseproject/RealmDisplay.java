@@ -43,7 +43,9 @@ public class RealmDisplay extends AppCompatActivity {
                     dataList.add(resultPersons.get(i).toString());
                 }
 
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(RealmDisplay.this, android.R.layout.simple_list_item_1, dataList);
+                ArrayAdapter<String> arrayAdapter =
+                        new ArrayAdapter<String>(RealmDisplay.this,
+                                android.R.layout.simple_list_item_1, dataList);
                 itemsListView.setAdapter(arrayAdapter);
             }
         });
